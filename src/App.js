@@ -1,22 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from 'react'
-
-export default class App extends Component {
-    constructor() {       // constructor call the at the first
-        super();          // this is for Reacct Parent, (component)
-        console.warn("this is constructor");
-        this.state={
-            data:"Babloo"
-        }
-    }
-  render() {
-    console.warn("this is render")
-    return (
-      <div><h1>App </h1><br />
-        {this.state.data}<br />
-        <h1>Good evening</h1>
-      </div>
-    );
-  }
+import Render from "./work/Render";
+function App()
+{
+  const [name, setName] = React.useState("Babloo");
+  return(
+    <div className='App'>
+      <h1>this is function</h1>
+      <Render name={name} />
+      <button onClick={()=>setName("bikkee")}>Update</button>
+    </div>
+  );
 }
+export default App;
