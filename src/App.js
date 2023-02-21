@@ -1,16 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
-// import Login from "./Login";
-import Function_as_Props from "./work/Function_as_Props";
-import React from "react";
-export default function App()
-{
-    function getData() {
-        alert("Hello from App")
+import React, { Component } from 'react'
+
+export default class App extends Component {
+    constructor() {       // constructor call the at the first
+        super();          // this is for Reacct Parent, (component)
+        console.warn("this is constructor");
+        this.state={
+            data:"Babloo"
+        }
     }
-    return(
-        <div className='App'>       
-        <Function_as_Props data={getData} />
-        </div>
+  render() {
+    console.warn("this is render")
+    return (
+      <div><h1>App </h1><br />
+        {this.state.data}<br />
+        <h1>Good evening</h1>
+      </div>
     );
+  }
 }
