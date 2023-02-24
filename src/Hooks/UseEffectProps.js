@@ -17,23 +17,42 @@ export default App;
 */
 
 
-import React, {useEffect} from 'react'
+// import React, {useEffect} from 'react'
 
-export default function UseEffectProps(props) {
-    useEffect(()=>{
-        alert("useEffect"+props.count);
-    }, [props.count])
-    useEffect(()=>{
-        console.warn("for data: "+props.data)
-    }, [props.data])
-  return (
-    <div>
-        <h1>Count Props: {props.count}</h1>
-        <h1>Data Props: {props.data}</h1>
-    </div>
+// export default function UseEffectProps(props) {
+//     useEffect(()=>{
+//         alert("useEffect"+props.count);
+//     }, [props.count])
+//     useEffect(()=>{
+//         console.warn("for data: "+props.data)
+//     }, [props.data])
+//   return (
+//     <div>
+//         <h1>Count Props: {props.count}</h1>
+//         <h1>Data Props: {props.data}</h1>
+//     </div>
+//   );
+// }
+
+import React, {useEffect}  from "react";
+function App(props)
+{
+  useEffect(()=>{
+    console.warn("this is data props: ",props.data);
+
+  }, [props.data])
+
+  useEffect(()=>{
+    alert("Count is Up to Dated: " + props.count)
+  })
+  return(
+<div>
+<h1>Data: {props.data}</h1>
+<h1>Count: {props.count}</h1>
+</div>
   );
 }
-
+export default App;
 
 /*
 

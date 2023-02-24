@@ -1,0 +1,10 @@
+.primary{
+    background-color: black;
+    color: red;
+}
+.App{
+    margin: 0;
+    background-color: aqua;
+    width: auto;
+    height: auto;
+}
