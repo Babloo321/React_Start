@@ -46,3 +46,20 @@ function App() {
 }
 export default App;
 */
+
+import React, {useEffect, useState} from 'react';
+import UseEffectProps from "./Hooks/UseEffectProps";
+function App()
+{
+  const [data, setData] = useState(10);
+  const [count, setCount] = useState(100);
+
+  return(
+    <div className='App'>
+      <UseEffectProps data={data} count={count} />
+      <button onClick={()=>setData(data+1)}>Updata Data</button>
+      <button onClick={()=> setCount(count+1)}>Updata Count</button>
+    </div>
+  );
+}
+export default App;
